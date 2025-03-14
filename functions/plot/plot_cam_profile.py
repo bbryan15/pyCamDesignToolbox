@@ -24,7 +24,7 @@ def plot_cam_profile(dfs: List[pd.DataFrame], labels: List[str]) -> plt.Figure:
         ax1.set_ylabel('Lift')
         ax1.set_title('Lift')
         ax1.grid(True)
-        ax1.legend()
+        ax1.legend(loc='upper right')
         
         # Plot velocity (v) vs cam angle
         ax2.plot(df['ca'], df['v'], '-', label=label)
@@ -32,7 +32,7 @@ def plot_cam_profile(dfs: List[pd.DataFrame], labels: List[str]) -> plt.Figure:
         ax2.set_ylabel('Velocity')
         ax2.set_title('Velocity')
         ax2.grid(True)
-        ax2.legend()
+        ax2.legend(loc='upper right')
         
         # Plot acceleration (a) vs cam angle
         ax3.plot(df['ca'], df['a'], '-', label=label)
@@ -40,7 +40,7 @@ def plot_cam_profile(dfs: List[pd.DataFrame], labels: List[str]) -> plt.Figure:
         ax3.set_ylabel('Acceleration')
         ax3.set_title('Acceleration')
         ax3.grid(True)
-        ax3.legend()
+        ax3.legend(loc='upper right')
         
         # Plot jerk (j) vs cam angle
         ax4.plot(df['ca'], df['j'], '-', label=label)
@@ -48,7 +48,7 @@ def plot_cam_profile(dfs: List[pd.DataFrame], labels: List[str]) -> plt.Figure:
         ax4.set_ylabel('Jerk')
         ax4.set_title('Jerk')
         ax4.grid(True)
-        ax4.legend()
+        ax4.legend(loc='upper right')
     
     # Adjust layout to prevent overlap
     plt.tight_layout()
